@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
-Sitemap: https://bitcoincloudminingindia.github.io/Bitcoin-Cloud-Mining/sitemap.xml
+Sitemap: https://btcreward.github.io/btcreward/sitemap.xml
