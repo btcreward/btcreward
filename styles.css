@@ -216,7 +216,7 @@ body {
     align-items: center;
 }
 
-.mining-animation {
+.computing-animation {
     position: relative;
     width: 180px;
     height: 180px;
@@ -231,7 +231,7 @@ body {
     animation: pulse 2s infinite;
 }
 
-.mining-particles {
+.computing-particles {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -240,8 +240,8 @@ body {
     animation: rotate 10s linear infinite;
 }
 
-.mining-particles::before,
-.mining-particles::after {
+.computing-particles::before,
+.computing-particles::after {
     content: '';
     position: absolute;
     width: 10px;
@@ -251,13 +251,13 @@ body {
     animation: particle 3s infinite;
 }
 
-.mining-particles::before {
+.computing-particles::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.mining-particles::after {
+.computing-particles::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -1191,7 +1191,7 @@ body {
         transform: none;
     }
 
-    .mining-animation {
+    .computing-animation {
         width: 100px;
         height: 100px;
     }
@@ -1419,12 +1419,12 @@ body {
         padding: 0 2px;
     }
 
-    .mining-animation {
+    .computing-animation {
         width: 38px;
         height: 38px;
     }
 
-    .mining-particles {
+    .computing-particles {
         border-width: 1px;
     }
 

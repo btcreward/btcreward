@@ -1,133 +1,133 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog | Bitcoin Cloud Mining</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="App logo/new_logo_48x48.png" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Blog | BTC Reward</title>
+ <link rel="stylesheet" href="styles.css" />
+ <link rel="icon" href="App logo/new_logo_48x48.png" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo">
-                    <img src="App logo/new_logo_72x72.png" alt="Logo" class="site-logo" />
-                    <span>Bitcoin Cloud Mining</span>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#app">App</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+ <header>
+ <nav class="navbar">
+ <div class="nav-container">
+ <a href="index.html" class="nav-logo">
+ <img src="App logo/new_logo_72x72.png" alt="Logo" class="site-logo" />
+ <span>BTC Reward</span>
+ </a>
+ <ul class="nav-menu">
+ <li><a href="index.html#home">Home</a></li>
+ <li><a href="index.html#features">Features</a></li>
+ <li><a href="index.html#app">App</a></li>
+ <li><a href="index.html#about">About</a></li>
+ <li><a href="index.html#contact">Contact</a></li>
+ </ul>
+ </div>
+ </nav>
+ </header>
 
-    <main class="blog-main">
-        <section class="blog-section">
-            <h1 class="blog-title">📰 Latest Blog Posts</h1>
-            <div id="blogger-feed">Loading posts...</div>
-            <div class="load-more-container">
-                <button id="load-more-btn" class="load-more-btn d-none">Load More Posts</button>
-            </div>
-        </section>
-    </main>
+ <main class="blog-main">
+ <section class="blog-section">
+ <h1 class="blog-title">ðŸ“° Latest Blog Posts</h1>
+ <div id="blogger-feed">Loading posts...</div>
+ <div class="load-more-container">
+ <button id="load-more-btn" class="load-more-btn d-none">Load More Posts</button>
+ </div>
+ </section>
+ </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Bitcoin Cloud Mining. All rights reserved.</p>
-        </div>
-    </footer>
+ <footer class="footer">
+ <div class="container">
+ <p>&copy; 2025 BTC Reward. All rights reserved.</p>
+ </div>
+ </footer>
 
-    <!-- Blog Fetch Script (JSON + CORS Proxy Safe) -->
-    <script>
-        const feedDiv = document.getElementById('blogger-feed');
-        const loadMoreBtn = document.getElementById('load-more-btn');
+ <!-- Blog Fetch Script (JSON + CORS Proxy Safe) -->
+ <script>
+ const feedDiv = document.getElementById('blogger-feed');
+ const loadMoreBtn = document.getElementById('load-more-btn');
 
-        let currentPage = 1;
-        const postsPerPage = 5;
-        let allPosts = [];
+ let currentPage = 1;
+ const postsPerPage = 5;
+ let allPosts = [];
 
-        async function loadBlogPosts(page = 1) {
-            try {
-                if (page === 1) {
-                    feedDiv.innerHTML = 'Loading posts...';
-                    loadMoreBtn.classList.add('d-none');
-                }
+ async function loadBlogPosts(page = 1) {
+ try {
+ if (page === 1) {
+ feedDiv.innerHTML = 'Loading posts...';
+ loadMoreBtn.classList.add('d-none');
+ }
 
                 const url = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://bitcoincloudminingformobile.blogspot.com/feeds/posts/default?alt=json&max-results=50&start-index=' + ((page - 1) * postsPerPage + 1));
 
-                const response = await fetch(url);
-                const data = await response.json();
-                const posts = data.feed.entry;
+ const response = await fetch(url);
+ const data = await response.json();
+ const posts = data.feed.entry;
 
-                if (!posts || posts.length === 0) {
-                    if (page === 1) {
-                        feedDiv.innerHTML = '<p>No blog posts found.</p>';
-                    }
-                    loadMoreBtn.classList.add('d-none');
-                    return;
-                }
+ if (!posts || posts.length === 0) {
+ if (page === 1) {
+ feedDiv.innerHTML = '<p>No blog posts found.</p>';
+ }
+ loadMoreBtn.classList.add('d-none');
+ return;
+ }
 
-                if (page === 1) {
-                    feedDiv.innerHTML = '';
-                    allPosts = [];
-                }
+ if (page === 1) {
+ feedDiv.innerHTML = '';
+ allPosts = [];
+ }
 
-                posts.forEach(post => {
-                    const title = post.title.$t;
-                    const link = post.link.find(l => l.rel === 'alternate').href;
-                    const pubDate = new Date(post.published.$t).toLocaleDateString();
-                    const content = post.content?.$t || '';
-                    const cleanDesc = content.replace(/<[^>]*>/g, '').substring(0, 150);
+ posts.forEach(post => {
+ const title = post.title.$t;
+ const link = post.link.find(l => l.rel === 'alternate').href;
+ const pubDate = new Date(post.published.$t).toLocaleDateString();
+ const content = post.content?.$t || '';
+ const cleanDesc = content.replace(/<[^>]*>/g, '').substring(0, 150);
 
-                    const postCard = `
-            <div class="blog-card">
-              <h3><a href="${link}" target="_blank" rel="noopener">${title}</a></h3>
-              <div class="blog-meta">${pubDate}</div>
-              <p>${cleanDesc}...</p>
-              <a href="${link}" target="_blank" rel="noopener" class="read-more">Read on Blogger</a>
-            </div>
-          `;
-                    feedDiv.innerHTML += postCard;
-                    allPosts.push(post);
-                });
+ const postCard = `
+ <div class="blog-card">
+ <h3><a href="${link}" target="_blank" rel="noopener">${title}</a></h3>
+ <div class="blog-meta">${pubDate}</div>
+ <p>${cleanDesc}...</p>
+ <a href="${link}" target="_blank" rel="noopener" class="read-more">Read on Blogger</a>
+ </div>
+ `;
+ feedDiv.innerHTML += postCard;
+ allPosts.push(post);
+ });
 
-                // Show load more button if there might be more posts
-                if (posts.length >= postsPerPage) {
-                    loadMoreBtn.classList.remove('d-none');
-                    loadMoreBtn.textContent = 'Load More Posts';
-                } else {
-                    loadMoreBtn.classList.add('d-none');
-                }
+ // Show load more button if there might be more posts
+ if (posts.length >= postsPerPage) {
+ loadMoreBtn.classList.remove('d-none');
+ loadMoreBtn.textContent = 'Load More Posts';
+ } else {
+ loadMoreBtn.classList.add('d-none');
+ }
 
-            } catch (err) {
-                console.error('Failed to load blog:', err);
-                if (page === 1) {
-                    feedDiv.innerHTML = '<p>Error loading blog posts.</p>';
-                }
-                loadMoreBtn.classList.add('d-none');
-            }
-        }
+ } catch (err) {
+ console.error('Failed to load blog:', err);
+ if (page === 1) {
+ feedDiv.innerHTML = '<p>Error loading blog posts.</p>';
+ }
+ loadMoreBtn.classList.add('d-none');
+ }
+ }
 
-        // Load more button click handler
-        loadMoreBtn.addEventListener('click', () => {
-            currentPage++;
-            loadMoreBtn.textContent = 'Loading...';
-            loadMoreBtn.disabled = true;
-            loadBlogPosts(currentPage).then(() => {
-                loadMoreBtn.disabled = false;
-            });
-        });
+ // Load more button click handler
+ loadMoreBtn.addEventListener('click', () => {
+ currentPage++;
+ loadMoreBtn.textContent = 'Loading...';
+ loadMoreBtn.disabled = true;
+ loadBlogPosts(currentPage).then(() => {
+ loadMoreBtn.disabled = false;
+ });
+ });
 
-        // Initial load
-        loadBlogPosts(1);
-    </script>
+ // Initial load
+ loadBlogPosts(1);
+ </script>
 </body>
 
 </html>

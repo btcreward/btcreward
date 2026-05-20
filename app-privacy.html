@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Privacy Policy - BTC Reward App</title>
+ <meta name="description" content="Privacy Policy for the BTC Reward App. Learn how we collect, use, and protect your data.">
+ <meta name="robots" content="index, follow">
+ <link rel="icon" type="image/png" href="App logo/new_logo_48x48.png">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: 'Inter', sans-serif;
+ background: #0a0a0f;
+ color: #e0e0e0;
+ line-height: 1.8;
+ min-height: 100vh;
+ }
+
+ .header {
+ background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+ padding: 40px 20px;
+ text-align: center;
+ border-bottom: 1px solid rgba(247, 147, 26, 0.3);
+ position: relative;
+ overflow: hidden;
+ }
+
+ .header::before {
+ content: '';
+ position: absolute;
+ top: -50%;
+ left: -50%;
+ width: 200%;
+ height: 200%;
+ background: radial-gradient(circle, rgba(247, 147, 26, 0.08) 0%, transparent 70%);
+ animation: pulse 4s ease-in-out infinite;
+ }
+
+ @keyframes pulse {
+ 0%, 100% { transform: scale(1); opacity: 0.5; }
+ 50% { transform: scale(1.1); opacity: 1; }
+ }
+
+ .header-logo {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 14px;
+ margin-bottom: 16px;
+ position: relative;
+ z-index: 1;
+ }
+
+ .header-logo img {
+ width: 56px;
+ height: 56px;
+ border-radius: 14px;
+ border: 2px solid rgba(247, 147, 26, 0.5);
+ box-shadow: 0 0 20px rgba(247, 147, 26, 0.3);
+ }
+
+ .header-logo span {
+ font-size: 26px;
+ font-weight: 700;
+ background: linear-gradient(135deg, #f7931a, #ffb347);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+
+ .header h1 {
+ font-size: 32px;
+ font-weight: 700;
+ color: #ffffff;
+ position: relative;
+ z-index: 1;
+ margin-bottom: 8px;
+ }
+
+ .header .subtitle {
+ color: rgba(255,255,255,0.5);
+ font-size: 14px;
+ position: relative;
+ z-index: 1;
+ }
+
+ .badge {
+ display: inline-block;
+ background: rgba(247, 147, 26, 0.15);
+ border: 1px solid rgba(247, 147, 26, 0.4);
+ color: #f7931a;
+ font-size: 12px;
+ font-weight: 600;
+ padding: 4px 12px;
+ border-radius: 20px;
+ margin-top: 10px;
+ position: relative;
+ z-index: 1;
+ }
+
+ .container {
+ max-width: 820px;
+ margin: 0 auto;
+ padding: 40px 24px 60px;
+ }
+
+ .last-updated {
+ background: rgba(247, 147, 26, 0.08);
+ border: 1px solid rgba(247, 147, 26, 0.2);
+ border-radius: 10px;
+ padding: 12px 18px;
+ font-size: 13px;
+ color: #f7931a;
+ margin-bottom: 36px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+
+ .intro-box {
+ background: rgba(255,255,255,0.03);
+ border-left: 3px solid #f7931a;
+ border-radius: 0 12px 12px 0;
+ padding: 20px 24px;
+ margin-bottom: 28px;
+ color: #b0b0c0;
+ font-size: 14.5px;
+ }
+
+ .section {
+ background: rgba(255,255,255,0.03);
+ border: 1px solid rgba(255,255,255,0.07);
+ border-radius: 16px;
+ padding: 28px;
+ margin-bottom: 20px;
+ transition: border-color 0.3s;
+ }
+
+ .section:hover {
+ border-color: rgba(247, 147, 26, 0.25);
+ }
+
+ .section-icon {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 36px;
+ height: 36px;
+ background: rgba(247, 147, 26, 0.15);
+ border: 1px solid rgba(247, 147, 26, 0.3);
+ border-radius: 10px;
+ font-size: 16px;
+ margin-right: 12px;
+ flex-shrink: 0;
+ }
+
+ .section-header {
+ display: flex;
+ align-items: center;
+ margin-bottom: 16px;
+ }
+
+ h2 {
+ font-size: 18px;
+ font-weight: 600;
+ color: #ffffff;
+ }
+
+ p {
+ color: #b0b0c0;
+ font-size: 14.5px;
+ margin-bottom: 12px;
+ }
+
+ p:last-child { margin-bottom: 0; }
+
+ ul {
+ list-style: none;
+ padding-left: 0;
+ }
+
+ ul li {
+ color: #b0b0c0;
+ font-size: 14.5px;
+ padding: 6px 0 6px 24px;
+ position: relative;
+ }
+
+ ul li::before {
+ content: '🔹';
+ position: absolute;
+ left: 0;
+ font-size: 11px;
+ top: 9px;
+ }
+
+ .data-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 12px;
+ font-size: 14px;
+ }
+
+ .data-table th {
+ background: rgba(247, 147, 26, 0.15);
+ color: #f7931a;
+ padding: 10px 16px;
+ text-align: left;
+ font-weight: 600;
+ border: 1px solid rgba(247,147,26,0.2);
+ }
+
+ .data-table td {
+ padding: 10px 16px;
+ border: 1px solid rgba(255,255,255,0.07);
+ color: #b0b0c0;
+ }
+
+ .data-table tr:nth-child(even) td {
+ background: rgba(255,255,255,0.02);
+ }
+
+ .no-data-badge {
+ display: inline-block;
+ background: rgba(76, 175, 80, 0.15);
+ border: 1px solid rgba(76, 175, 80, 0.4);
+ color: #4caf50;
+ font-size: 12px;
+ font-weight: 600;
+ padding: 3px 10px;
+ border-radius: 20px;
+ }
+
+ .contact-box {
+ background: linear-gradient(135deg, rgba(247,147,26,0.1), rgba(247,147,26,0.05));
+ border: 1px solid rgba(247,147,26,0.3);
+ border-radius: 14px;
+ padding: 24px;
+ text-align: center;
+ margin-top: 36px;
+ }
+
+ .contact-box p {
+ margin-bottom: 8px;
+ font-size: 15px;
+ color: #e0e0e0;
+ }
+
+ .contact-box a {
+ color: #f7931a;
+ text-decoration: none;
+ font-weight: 600;
+ font-size: 15px;
+ }
+
+ .contact-box a:hover { text-decoration: underline; }
+
+ footer {
+ text-align: center;
+ padding: 24px;
+ color: rgba(255,255,255,0.3);
+ font-size: 13px;
+ border-top: 1px solid rgba(255,255,255,0.06);
+ }
+
+ footer a {
+ color: #f7931a;
+ text-decoration: none;
+ }
+
+ .highlight {
+ color: #f7931a;
+ font-weight: 600;
+ }
+
+ @media (max-width: 600px) {
+ .header h1 { font-size: 24px; }
+ .container { padding: 24px 16px 40px; }
+ .section { padding: 20px; }
+ .data-table { font-size: 12px; }
+ .data-table th, .data-table td { padding: 8px 10px; }
+ }
+ </style>
+</head>
+
+<body>
+
+ <div class="header">
+ <div class="header-logo">
+ <img src="App logo/new_logo_72x72.png" alt="BTC Reward Logo">
+ <span>BTC Reward</span>
+ </div>
+ <h1>Privacy Policy</h1>
+ <p class="subtitle">How we collect, use, and protect your information</p>
+ <div class="badge">🔒 Your Privacy Matters</div>
+ </div>
+
+ <div class="container">
+
+ <div class="last-updated">
+ 📅 &nbsp; Last Updated: <strong>May 2025</strong> &nbsp;|&nbsp; Applies to BTC Reward Android App
+ </div>
+
+ <div class="intro-box">
+ <strong style="color:#fff;">BTC Reward</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the <strong>BTC Reward</strong> mobile application. Please read this policy carefully.
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">📦</span>
+ <h2>Information We Collect</h2>
+ </div>
+ <p>We may collect the following types of information:</p>
+ <table class="data-table">
+ <tr>
+ <th>Data Type</th>
+ <th>Purpose</th>
+ <th>Collected?</th>
+ </tr>
+ <tr>
+ <td>Email Address</td>
+ <td>Account registration & communication</td>
+ <td>Yes</td>
+ </tr>
+ <tr>
+ <td>Device Information</td>
+ <td>App performance & security</td>
+ <td>Yes</td>
+ </tr>
+ <tr>
+ <td>Usage Data</td>
+ <td>Improving app features</td>
+ <td>Yes</td>
+ </tr>
+ <tr>
+ <td>Wallet Address</td>
+ <td>BTC reward withdrawals</td>
+ <td>Yes (user-provided)</td>
+ </tr>
+ <tr>
+ <td>Location Data</td>
+ <td>—</td>
+ <td><span class="no-data-badge">✅ Not Collected</span></td>
+ </tr>
+ <tr>
+ <td>Contacts / Camera / Mic</td>
+ <td>—</td>
+ <td><span class="no-data-badge">✅ Not Accessed</span></td>
+ </tr>
+ </table>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">🎯</span>
+ <h2>How We Use Your Information</h2>
+ </div>
+ <ul>
+ <li>To create and manage your user account.</li>
+ <li>To process and distribute BTC rewards.</li>
+ <li>To send important notifications about the app and your account.</li>
+ <li>To improve app performance, features, and user experience.</li>
+ <li>To detect, prevent, and address technical issues or fraud.</li>
+ <li>To comply with legal obligations.</li>
+ </ul>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">🤝</span>
+ <h2>Information Sharing & Disclosure</h2>
+ </div>
+ <p>We do <strong style="color:#fff;">not sell, trade, or rent</strong> your personal information to third parties. We may share data in the following limited circumstances:</p>
+ <ul>
+ <li><strong style="color:#fff;">Service Providers:</strong> Trusted third parties who assist in operating our app under strict confidentiality agreements.</li>
+ <li><strong style="color:#fff;">Legal Requirements:</strong> When required by law or to protect our rights and safety.</li>
+ <li><strong style="color:#fff;">Business Transfers:</strong> In the event of a merger or acquisition, your data may be transferred with prior notice.</li>
+ </ul>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">🔐</span>
+ <h2>Data Security</h2>
+ </div>
+ <p>We implement industry-standard security measures to protect your personal information, including:</p>
+ <ul>
+ <li>SSL/TLS encryption for all data transmission.</li>
+ <li>Secure server infrastructure with access controls.</li>
+ <li>Regular security audits and vulnerability assessments.</li>
+ <li>Two-factor authentication support for accounts.</li>
+ </ul>
+ <p>However, no method of transmission over the internet is 100% secure. We strive to use commercially acceptable means to protect your data but cannot guarantee absolute security.</p>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">🧒</span>
+ <h2>Children's Privacy</h2>
+ </div>
+ <p>The BTC Reward app is <strong style="color:#fff;">not intended for users under the age of 18</strong>. We do not knowingly collect personal information from children. If we discover that a child under 18 has provided us with personal data, we will immediately delete such information.</p>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">⚙️</span>
+ <h2>Your Rights & Choices</h2>
+ </div>
+ <p>You have the following rights regarding your personal data:</p>
+ <ul>
+ <li><strong style="color:#fff;">Access:</strong> Request a copy of the data we hold about you.</li>
+ <li><strong style="color:#fff;">Correction:</strong> Request correction of inaccurate data.</li>
+ <li><strong style="color:#fff;">Deletion:</strong> Request deletion of your account and associated data.</li>
+ <li><strong style="color:#fff;">Opt-out:</strong> Unsubscribe from promotional emails at any time.</li>
+ <li><strong style="color:#fff;">Data Portability:</strong> Request your data in a portable format.</li>
+ </ul>
+ <p>To exercise any of these rights, contact us at <a href="mailto:support@solvextechnology.in" style="color:#f7931a;">support@solvextechnology.in</a>.</p>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">🍪</span>
+ <h2>Cookies & Tracking</h2>
+ </div>
+ <p>Our mobile app does <strong style="color:#fff;">not use cookies</strong>. However, our website may use cookies to enhance your browsing experience. You can control cookie settings through your browser preferences.</p>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">🌍</span>
+ <h2>Third-Party Services</h2>
+ </div>
+ <p>The app may contain links to third-party services (e.g., Google Play Store, social media platforms). We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.</p>
+ </div>
+
+ <div class="section">
+ <div class="section-header">
+ <span class="section-icon">🔄</span>
+ <h2>Changes to This Privacy Policy</h2>
+ </div>
+ <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the "Last Updated" date. Your continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+ </div>
+
+ <div class="contact-box">
+ <p>🛡️ Questions about your privacy?</p>
+ <p>Contact our Privacy Team at</p>
+ <p><a href="mailto:support@solvextechnology.in">support@solvextechnology.in</a></p>
+ </div>
+
+ </div>
+
+ <footer>
+ <p>&copy; 2025 <a href="index.html">BTC Reward</a>. All rights reserved. &nbsp;|&nbsp; <a href="app-terms.html">Terms & Conditions</a></p>
+ </footer>
+
+</body>
+</html>
